@@ -1,6 +1,27 @@
-:root {
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Yeseva+One&display=swap');
+
+:root {  
   --background: #ffffff;
   --foreground: #171717;
+  --cor-branca: #FFFFFF;
+  --cor-verde-escuro: #3b6945;
+  --cor-verde-claro: #cae4cc;
+  --cor-cinza-claro: #F1F1F1;
+  --cor-cinza-escuro: #505050;
+  --cor-bege-claro: #D1B59B;
+  --cor-verde-musgo: #4A6F4B;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  font-family: "Yeseva One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +39,8 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cor-cinza-claro);
+  font-family: "Epilogue", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -1,0 +1,77 @@
+.header {
+  background-color: var(--cor-verde-escuro);
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.menuButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  /* Oculto por padrão em telas maiores */
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: var(--cor-verde-claro);
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .menuButton {
+    display: block;
+    /* Mostra o botão do menu em telas menores */
+  }
+
+  .nav {
+    display: none;
+    /* Oculta o menu em telas menores por padrão */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    /* Ajuste conforme necessário */
+    left: 0;
+    background-color: #f0f0f0;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navOpen {
+    display: flex;
+    /* Mostra o menu quando o botão é clicado */
+  }
+
+  .navList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navItem {
+    margin: 10px 0;
+  }
+}
