@@ -16,7 +16,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <h1 className={styles.logo}>
+                <div className={styles.logo}>
                     <Image
                         src="/logo_green.png"
                         alt="Next.js logo"
@@ -24,8 +24,7 @@ export default function Header() {
                         height={38}
                         priority
                     />
-                    Atendimento Veterinário Domiciliar
-                </h1>
+                </div>
 
                 <button className={styles.menuButton} onClick={toggleMenu}>
                     <FontAwesomeIcon icon={menuOpen ? faX : faBars} />
