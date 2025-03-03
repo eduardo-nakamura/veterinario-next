@@ -32,7 +32,7 @@ export default function Home() {
       <div className={styles.page}>
         <section className={`${styles.sectionFlex} ${styles.section__colums__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div style={{alignSelf:'flex-start', width:'60%'}}>
-            <h1 className={styles.h1__title}>Veterinário a domicílio para cães e gatos | Bruno May Pisetta</h1>
+            <h1 className={styles.h1__title}>Veterinários a domicílio para cães e gatos | Bruno May Pisetta</h1>
           </div>
           <div className={styles.img__title}>
             <Image
@@ -45,7 +45,7 @@ export default function Home() {
           </div>
 
         </section>
-        <section className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-branca)' }}>
+        <section id="servicos" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-branca)' }}>
 
           <div>
             <h2>Serviços Oferecidos</h2>
@@ -66,7 +66,7 @@ export default function Home() {
             />
           </div>
         </section>
-        <section className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
+        <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div >
             <Image
               src="/mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
@@ -85,13 +85,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-branca)' }}>
-          <div className={styles.gridItem}>
+        <section id="missao" className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-branca)' }}>
+          <div className={`${styles.gridItem} ${styles.gridItemTwo}`}>
             <h2>Missão e Valores</h2>
             <p>Acredito no cuidado humanizado que prioriza o bem-estar da família pet e tutor(es). Realizo um atendimento que valoriza as características individuais de cada animal e os valores de seus tutores. Considero que o atendimento a domicílio não é apenas uma comodidade, como também faz parte do respeito ao animal ao proporcionar um ambiente seguro e familiar durante as consultas. </p>
             <p>Prezo pelo acompanhamento longitudinal, de modo que seja possível compreender e valorizar os diferentes momentos e fases da vida. O acompanhamento personalizado ao decorrer do tempo permite identificar a dinâmica diária, as  peculiaridades, os gostos e as necessidades de cada indivíduo. Essa visão geral da saúde e do bem estar animal minimiza o volume de procedimentos  invasivos excessivos, tornando possível realizar encaminhamentos pontuais para especialistas que se adequem ao perfil do animal  apenas quando necessário.</p>
           </div>
-          <div className={styles.gridItem} style={{ alignItems: 'center' }}>
+          <div className={`${styles.gridItem} ${styles.gridItemOne}`} style={{ alignItems: 'center' }}>
             <div className={styles.img__title}>
               <Image
                 src="/detalhe-rosto-gato.jpg"
@@ -104,12 +104,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
+        <section id="bruno" className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div className={styles.gridItem}>
             <div className={styles.gridItem} style={{ alignItems: 'center' }}>
               <div className={styles.img__title}>
                 <Image
-                  src="/bruno.jpeg" // Path to the image (in the `public` folder)
+                  src="/veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
                   alt={`Foto de Bruno May Pisetta`}
                   width={383}
                   height={383}
@@ -126,19 +126,17 @@ export default function Home() {
 
 
         </section>
-        <section className={styles.sectionGrid4col} style={{ backgroundColor: 'var(--cor-branca)' }}>
-          <div className={`${styles.gridItem} ${styles.gridItem2x2}`}><h2>Contato</h2></div>
-          <div className={styles.gridItem}><p>Whatsapp: <a href="https://wa.me/5511993177378?text=SuaMensagem">(11) 99317-7378</a></p></div>
-          <div className={styles.gridItem}>   <p>Email: <a href="mailto:bruno.may.pisetta@gmail.com">bruno.may.pisetta@gmail.com</a></p></div>
-          <div className={styles.gridItem}>          <p>Linkedin: <a href="https://www.linkedin.com/in/bruno-pisetta">www.linkedin.com/in/bruno-pisetta</a></p>
+
+        <section id="contato" className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-branca)' }}>
+          <div >
+            <h2>Contato</h2>            
           </div>
-          <div className={styles.gridItem}>          <p>Link cartão de visitas digital: <a href="https://trakto.link/BrunoMayPisetta">https://trakto.link/BrunoMayPisetta</a></p>
+          <div  >
+            <p>Whatsapp: <a href="https://wa.me/5511993177378?text=SuaMensagem">(11) 99317-7378</a></p>
+            <p>Email: <a href="mailto:bruno.may.pisetta@gmail.com">bruno.may.pisetta@gmail.com</a></p>
+            <p>Linkedin: <a href="https://www.linkedin.com/in/bruno-pisetta">www.linkedin.com/in/bruno-pisetta</a></p>
+            <p>Link cartão de visitas digital: <a href="https://trakto.link/BrunoMayPisetta">https://trakto.link/BrunoMayPisetta</a></p>
           </div>
-          {/* 
-          
-       
-          <p>Linkedin: <a href="https://www.linkedin.com/in/bruno-pisetta">www.linkedin.com/in/bruno-pisetta</a></p>
-          <p>Link cartão de visitas digital: <a href="https://trakto.link/BrunoMayPisetta">https://trakto.link/BrunoMayPisetta</a></p> */}
         </section>
 
       </div>
