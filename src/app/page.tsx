@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className={styles.img__title}>
             <Image
-              src="/close-cachorro.jpg" // Path to the image (in the `public` folder)
+              src="./close-cachorro.jpg" // Path to the image (in the `public` folder)
               alt={`Foto em close de um cachorro`}
               width={511}
               height={708}
