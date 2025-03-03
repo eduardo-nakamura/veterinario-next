@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className={styles.img__title}>
             <Image
-              src="/cachorro-exame-veterinario.jpg"
+              src="./cachorro-exame-veterinario.jpg"
               alt={`Cachorro sendo examinado por um veterinário`}
               width={383}
               height={383}
@@ -69,7 +69,7 @@ export default function Home() {
         <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div >
             <Image
-              src="/mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
+              src="./mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
               alt={`Localização da Rua Nanuque, 432`}
               width={715 / 1.8}
               height={727 / 1.8}
