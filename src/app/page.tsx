@@ -36,7 +36,7 @@ export default function Home() {
           </div>
           <div className={styles.img__title}>
             <Image
-              src="./close-cachorro.jpg" // Path to the image (in the `public` folder)
+              src="/close-cachorro.jpg" // Path to the image (in the `public` folder)
               alt={`Foto em close de um cachorro`}
               width={511}
               height={708}
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className={styles.img__title}>
             <Image
-              src="./cachorro-exame-veterinario.jpg"
+              src="/cachorro-exame-veterinario.jpg"
               alt={`Cachorro sendo examinado por um veterinário`}
               width={383}
               height={383}
@@ -69,7 +69,7 @@ export default function Home() {
         <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div >
             <Image
-              src="./mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
+              src="/mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
               alt={`Localização da Rua Nanuque, 432`}
               width={715 / 1.8}
               height={727 / 1.8}
@@ -94,7 +94,7 @@ export default function Home() {
           <div className={`${styles.gridItem} ${styles.gridItemOne}`} style={{ alignItems: 'center' }}>
             <div className={styles.img__title}>
               <Image
-                src="./detalhe-rosto-gato.jpg"
+                src="/detalhe-rosto-gato.jpg"
                 alt={`Foto em close de um gato`}
                 width={383}
                 height={383}
@@ -109,7 +109,7 @@ export default function Home() {
             <div className={styles.gridItem} style={{ alignItems: 'center' }}>
               <div className={styles.img__title}>
                 <Image
-                  src="./veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
+                  src="/veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
                   alt={`Foto de Bruno May Pisetta`}
                   width={383}
                   height={383}

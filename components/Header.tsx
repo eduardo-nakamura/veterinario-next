@@ -18,7 +18,7 @@ export default function Header() {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Image
-                        src="./logo_green.png"
+                        src="/logo_green.png"
                         alt="Next.js logo"
                         width={38}
                         height={38}
