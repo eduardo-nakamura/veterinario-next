@@ -94,7 +94,7 @@ export default function Home() {
           <div className={`${styles.gridItem} ${styles.gridItemOne}`} style={{ alignItems: 'center' }}>
             <div className={styles.img__title}>
               <Image
-                src="/detalhe-rosto-gato.jpg"
+                src="./detalhe-rosto-gato.jpg"
                 alt={`Foto em close de um gato`}
                 width={383}
                 height={383}
@@ -109,7 +109,7 @@ export default function Home() {
             <div className={styles.gridItem} style={{ alignItems: 'center' }}>
               <div className={styles.img__title}>
                 <Image
-                  src="/veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
+                  src="./veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
                   alt={`Foto de Bruno May Pisetta`}
                   width={383}
                   height={383}
