@@ -32,7 +32,7 @@ export default function Home() {
       <div className={styles.page}>
         <section className={`${styles.sectionFlex} ${styles.section__colums__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div style={{alignSelf:'flex-start', width:'60%'}}>
-            <h1 className={styles.h1__title}>Veterinários a domicílio para cães e gatos | Bruno May Pisetta</h1>
+            <h1 className={styles.h1__title}>Veterinário a domicílio para cães e gatos | Bruno May Pisetta</h1>
           </div>
           <div className={styles.img__title}>
             <Image
