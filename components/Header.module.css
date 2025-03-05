@@ -41,7 +41,9 @@
   gap: 30px;
   
 }
-
+.navItem {
+  cursor: pointer;
+}
 
 
 .navLink{

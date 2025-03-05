@@ -1,7 +1,9 @@
 'use client'; // Adicione esta linha no topo do arquivo
 
 import React, { useState } from 'react'
-import Link from 'next/link'; // Importe o componente Link do Next.js
+//import Link from 'next/link'; // Importe o componente Link do Next.js
+import { Link } from 'react-scroll';
+
 import Image from "next/image";
 import styles from './Header.module.css'; // Importe os estilos CSS
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -33,27 +35,27 @@ export default function Header() {
                 <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
                     <ul className={styles.navList}>
                         <li className={styles.navItem}>
-                            <Link href="#servicos" className={styles.navLink}>
+                            <Link to="servicos" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
                                 <FontAwesomeIcon icon={faDog} /> Serviços
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#horario" className={styles.navLink}>
+                            <Link to="horario" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
                                 <FontAwesomeIcon icon={faUserDoctor} /> Horário
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#missao" className={styles.navLink}>
+                            <Link to="missao" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
                                 <FontAwesomeIcon icon={faHeart} /> Missão e Valores
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#bruno" className={styles.navLink}>
+                            <Link to="bruno" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
                                 <FontAwesomeIcon icon={faCircleInfo} /> Quem é Bruno
                             </Link>
                         </li>
                         <li className={styles.navItem}>
-                            <Link href="#contato" className={styles.navLink}>
+                            <Link to="contato" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
                                 <FontAwesomeIcon icon={faAddressCard} />Contato
                             </Link>
                         </li>
