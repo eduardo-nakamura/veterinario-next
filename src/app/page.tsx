@@ -105,8 +105,8 @@ export default function Home() {
         </section>
 
         <section id="bruno" className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
-          <div className={styles.gridItem}>
-            <div className={styles.gridItem} style={{ alignItems: 'center' }}>
+        <div className={styles.gridItem} style={{ alignItems: 'center' }}>
+            
               <div className={styles.img__title}>
                 <Image
                   src="./veterinario-bruno-may-pisetta.jpeg" // Path to the image (in the `public` folder)
@@ -116,7 +116,7 @@ export default function Home() {
                   layout="responsive"
                 />
               </div>
-            </div>
+            
           </div>
           <div className={styles.gridItem}>
             <h2>Quem é Bruno</h2>
@@ -128,10 +128,10 @@ export default function Home() {
         </section>
 
         <section id="contato" className={styles.sectionGrid2col} style={{ backgroundColor: 'var(--cor-branca)' }}>
-          <div >
+          <div className={styles.gridItem}>
             <h2>Contato</h2>            
           </div>
-          <div  >
+          <div  className={styles.gridItem}>
             <p>Whatsapp: <a href="https://wa.me/5511993177378?text=SuaMensagem">(11) 99317-7378</a></p>
             <p>Email: <a href="mailto:bruno.may.pisetta@gmail.com">bruno.may.pisetta@gmail.com</a></p>
             <p>Linkedin: <a href="https://www.linkedin.com/in/bruno-pisetta">www.linkedin.com/in/bruno-pisetta</a></p>

@@ -112,6 +112,10 @@
 
 
   }
+  .img__title {
+    width: 90vw;
+    height: 90vw;
+  }
   .h1__title {
     position: relative;
     left: 0;

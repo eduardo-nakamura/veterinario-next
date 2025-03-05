@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     images: "https://assets.storage.trakto.io/WFwSOE6steTvXQPjV3NfFTllMOZ2/41aa619f-ea28-40c0-8ccd-2eba2b1a44bb.png",
     // url: "https://example.com",
   },
+
   // twitter: {
   //   card: "summary_large_image",
   // },
