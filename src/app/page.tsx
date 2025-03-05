@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </section>
         <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
-          <div className={styles.img__title}>
+          <div className={styles.img__title} style={{borderRadius: '0'}}>
             <Image
               src="./mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
               alt={`Localização da Rua Nanuque, 432`}
