@@ -163,7 +163,18 @@
   .sectionGrid2col {
     display: grid;
     grid-template-columns: 1fr;    
-  
+    padding: 40px 0;    
+    justify-items: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: var(--cor-cinza-escuro);
+    min-height: 50vh;
+    gap: 10px;
+    padding: 40px;
+    width: 100%; */
+  }
+  .gridItem {
+    width: 90%;
   }
   .sectionGrid h2 {
     text-align: left;
