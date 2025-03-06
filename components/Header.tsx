@@ -36,27 +36,37 @@ export default function Header() {
                     <ul className={styles.navList}>
                         <li className={styles.navItem}>
                             <Link to="servicos" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
-                                <FontAwesomeIcon icon={faDog} /> Serviços
+                                <button className={styles.menuNavButton} onClick={() => setMenuOpen(false)}><FontAwesomeIcon icon={faDog} /> Serviços</button>
+                                
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="horario" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
+
+                                <button className={styles.menuNavButton} onClick={() => setMenuOpen(false)}>
                                 <FontAwesomeIcon icon={faUserDoctor} /> Horário
+                                </button>
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="missao" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
+                                <button className={styles.menuNavButton} onClick={() => setMenuOpen(false)}>
                                 <FontAwesomeIcon icon={faHeart} /> Missão e Valores
+                                </button>
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="bruno" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
+                                <button className={styles.menuNavButton} onClick={() => setMenuOpen(false)}>
                                 <FontAwesomeIcon icon={faCircleInfo} /> Quem é Bruno
+                                </button>
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link to="contato" className={styles.navLink} smooth={true} duration={500}  offset={-80}>
+                                <button className={styles.menuNavButton} onClick={() => setMenuOpen(false)}>
                                 <FontAwesomeIcon icon={faAddressCard} />Contato
+                                </button>
                             </Link>
                         </li>
                     </ul>

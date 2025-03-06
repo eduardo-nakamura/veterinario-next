@@ -26,8 +26,14 @@
   border: none;
   font-size: 2rem;
   display: none;
+  color: var(--cor-verde-claro);
 }
-
+.menuNavButton {
+  background: none;
+  border: none;
+  color: var(--cor-verde-claro);
+  text-shadow: 2px 2px 5px black;
+}
 .nav {
   display: flex;
 }
@@ -47,10 +53,10 @@
   transform: scale(1.1);
 }
 
-a.navLink{  
+.navLink{  
   color: var(--cor-verde-claro);
   text-decoration: none;
-  text-shadow: 2px 2px 5px black;
+
 }
 .navLink{
   font-size: 1rem;
