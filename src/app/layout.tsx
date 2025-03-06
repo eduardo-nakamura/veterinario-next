@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 // 
 
 export const metadata: Metadata = {
-  title: "Atendimento Veterinário Domiciliar | Bruno Pisetta | São Paulo/Lapa",
-  description: "Atendimento veterinário domiciliar para cães e gatos em São Paulo/Lapa. Consultas, vacinas, coleta de sangue e acompanhamento personalizado. Agende agora!",
+  title: "Vet Domicílio SP Lapa | Bruno Pisetta",
+  description: "Veterinário domiciliar em São Paulo/Lapa para cães e gatos. Consultas, vacinas, exames e acompanhamento personalizado. Agende sua consulta!",
   openGraph: {
-    title: "Atendimento Veterinário Domiciliar | Bruno Pisetta | São Paulo/Lapa",
-    description: "Atendimento veterinário domiciliar para cães e gatos em São Paulo/Lapa. Consultas, vacinas, coleta de sangue e acompanhamento personalizado. Agende agora!",
+    title: "Vet Domicílio SP Lapa | Bruno Pisetta",
+    description: "Veterinário domiciliar em São Paulo/Lapa para cães e gatos. Consultas, vacinas, exames e acompanhamento personalizado. Agende sua consulta!",
     images: "https://assets.storage.trakto.io/WFwSOE6steTvXQPjV3NfFTllMOZ2/41aa619f-ea28-40c0-8ccd-2eba2b1a44bb.png",
     // url: "https://example.com",
   },
@@ -35,7 +35,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>

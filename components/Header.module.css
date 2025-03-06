@@ -24,10 +24,8 @@
 .menuButton {
   background: none;
   border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+  font-size: 2rem;
   display: none;
-  /* Oculto por padrão em telas maiores */
 }
 
 .nav {
@@ -41,16 +39,31 @@
   gap: 30px;
   
 }
-.navItem {
+.navItem{
+  transition: all 0.2s;
+}
+.navItem:hover {
   cursor: pointer;
+  transform: scale(1.1);
 }
 
-
+a.navLink{  
+  color: var(--cor-verde-claro);
+  text-decoration: none;
+  text-shadow: 2px 2px 5px black;
+}
 .navLink{
   font-size: 1rem;
   text-decoration: none;
   color: var(--cor-verde-claro);
   overflow-x: hidden;
+  text-align: center;  
+  transition: all 0.2s;  
+}
+.navLink:hover {
+
+  cursor: pointer;
+
 }
 .navLink svg{
   margin-right: 5px;
