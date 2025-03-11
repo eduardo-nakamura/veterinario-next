@@ -1,7 +1,7 @@
-import React, { useMemo, useState, useRef } from 'react';
+import React, { useMemo, useState } from 'react';
 import styles from './Map.module.css'
 
-import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
 import icon from '../public/marker-icon.png'; // Importe a imagem
 import icon2 from '../public/marker-icon-alt.png'; // Importe a imagem
 import L, { LatLngTuple } from 'leaflet'; // Importe LatLngTuple de leaflet
@@ -10,9 +10,20 @@ import 'leaflet/dist/leaflet.css';
 
 import 'leaflet/dist/leaflet.css'; // Importe os estilos do Leaflet
 
+function MapController({ coords }: { coords: LatLngTuple | null }) {
+    const map = useMap();
+
+    React.useEffect(() => {
+        if (coords) {
+            map.flyTo(coords, 12, { duration: 2 });
+        }
+    }, [coords, map]);
+
+    return null; // Este componente não renderiza nada visualmente
+}
 export default function Map() {
-    const position: LatLngTuple = [-23.53043099873096, -46.72610638721699]; // Declaração de tipo aqui
-    const mapRef = useRef<MapContainer>(null); // Referência ao MapContainer
+    const position: LatLngTuple = [-23.53043099873096, -46.72610638721699];
+
 
     const iconOne = useMemo(() => {
         return L.icon({
@@ -21,7 +32,7 @@ export default function Map() {
             iconAnchor: [16, 32],
         });
     }, []);
-    
+
     const iconTwo = useMemo(() => {
         return L.icon({
             iconUrl: icon2.src, // Use .src para obter o caminho correto
@@ -30,6 +41,7 @@ export default function Map() {
         });
     }, []);
     const [endereco, setEndereco] = useState('');
+
     const [coordenadas, setCoordenadas] = useState<[number, number] | null>(null); // Defina o tipo do estado
 
     const handleEnderecoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -43,10 +55,8 @@ export default function Map() {
             const { lat, lon } = data[0];
             setCoordenadas([Number(lat), Number(lon)]);
 
-            // Atualiza o zoom e o centro do mapa
-            if (mapRef.current) {
-                mapRef.current.setView(position, 12); // Define o zoom desejado (15 no exemplo)
-            }
+
+
         } catch (error) {
             console.error(error);
         }
@@ -54,7 +64,7 @@ export default function Map() {
 
     return (
         <>
-            <MapContainer ref={mapRef} center={position} zoom={10} style={{ height: '500px', width: '100%', zIndex: 0 }}>
+            <MapContainer center={position} zoom={10} style={{ height: '500px', width: '100%', zIndex: 0 }}>
                 <Circle center={position} radius={10000} />
 
                 <TileLayer
@@ -73,16 +83,18 @@ export default function Map() {
                         </Popup>
                     </Marker>
                 )}
+                <MapController coords={coordenadas} />
+
             </MapContainer>
             <div className={styles.searchContainer}>
                 <input
-     
+
                     type="text"
                     placeholder="Nome da rua / CEP"
                     value={endereco}
                     onChange={handleEnderecoChange}
                 />
-                <button  onClick={buscarCoordenadas}>Buscar Coordenadas</button>
+                <button onClick={buscarCoordenadas}>Buscar Coordenadas</button>
 
             </div>
 
