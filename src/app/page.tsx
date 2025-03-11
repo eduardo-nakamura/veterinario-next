@@ -6,12 +6,16 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import dynamic from 'next/dynamic';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard, faClock, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 
-
+const DynamicMap = dynamic(() => import('../../components/Map'), {
+  ssr: false,
+});
 // Foto de Caio  : https://www.pexels.com/pt-br/foto/papagaio-verde-na-mao-da-pessoa-56733/
 // Photo by Pixabay: https://www.pexels.com/photo/long-coated-white-and-black-dog-220938/
 // Foto de Wojciech Kumpicki: https://www.pexels.com/pt-br/foto/gato-malhado-marrom-2071882/
@@ -84,16 +88,17 @@ export default function Home() {
 
         <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div className={`${styles.itemFlex} ${styles.itemFlexCenter} ${styles.gridItemTwo}`}>
-            <div className={styles.img__title}>
+          <DynamicMap />
+            {/* <div className={styles.img__title}>
               <Image
-                src="./mapa-rua-nanuque-432.png" // Path to the image (in the `public` folder)
+                src="./mapa-rua-nanuque-432.png"
                 alt={`Localização da Rua Nanuque, 432`}
                 width={383}
                 height={383}
                 layout="responsive"
 
               />
-            </div>
+            </div> */}
           </div>
           <div className={`${styles.itemFlex}  ${styles.gridItemOne}`}>
             <h2><FontAwesomeIcon icon={faClock} /> Horário de Atendimento </h2>
@@ -102,6 +107,11 @@ export default function Home() {
             <h2><FontAwesomeIcon icon={faLocationDot} /> Área de atendimento</h2>
             <p><strong>10km</strong> de raio saindo da Rua Nanuque, 432</p>
           </div>
+
+        </section>
+        <section className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
+          
+          
         </section>
 
         {/* <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>

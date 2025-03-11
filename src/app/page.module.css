@@ -10,12 +10,16 @@
 .cta{
   background: transparent;
   color: var(--cor-cinza-escuro);
-  font-family: "Yeseva One", serif;  
+  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   margin: 30px 0 0;
   padding: 10px 10px;
   border: 3px solid var(--cor-cinza-escuro);
   border-radius: 5px;
+}
+.cta:active{
+  background: var(--cor-verde-escuro);
+  color: var(--cor-cinza-claro);
 }
 .sectionFlex {
   position: relative;
