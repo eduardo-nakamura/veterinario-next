@@ -64,7 +64,7 @@ export default function Map() {
 
     return (
         <>
-            <MapContainer center={position} zoom={10} style={{ height: '500px', width: '100%', zIndex: 0 }}>
+            <MapContainer center={position} zoom={10} style={{ height: '300px', width: '100%', zIndex: 0 }}>
                 <Circle center={position} radius={10000} />
 
                 <TileLayer
@@ -86,6 +86,9 @@ export default function Map() {
                 <MapController coords={coordenadas} />
 
             </MapContainer>
+            <div style={{width: '100%'}}>
+            <p><strong>Verifique se atendemos na sua região:</strong></p>
+            </div>
             <div className={styles.searchContainer}>
                 <input
 
