@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard, faClock, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
+import WhatsappBtn from '../../components/WhatsappBtn';
 
 const DynamicMap = dynamic(() => import('../../components/Map'), {
   ssr: false,
@@ -37,7 +38,7 @@ export default function Home() {
   return (
     <>
       <Header />
-
+     <WhatsappBtn /> 
       <div className={styles.page}>
         <section className={`${styles.sectionFlex} ${styles.section__colums__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div className={styles.h1__container} style={{ alignSelf: 'flex-start' }}>
@@ -233,7 +234,7 @@ export default function Home() {
 
               <a href="https://www.linkedin.com/in/bruno-pisetta"><FontAwesomeIcon icon={faLinkedin} /></a>
 
-              <a href="https://wa.me/5511993177378?text=SuaMensagem">   <FontAwesomeIcon icon={faWhatsapp} /></a>
+              <a href="https://wa.me/5511975672727?text=SuaMensagem">   <FontAwesomeIcon icon={faWhatsapp} /></a>
 
               <a href="mailto:bruno.may.pisetta@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
 

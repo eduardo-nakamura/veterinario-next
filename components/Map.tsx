@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react';
 import styles from './Map.module.css'
 
 import { MapContainer, TileLayer, Marker, Popup, Circle, useMap } from 'react-leaflet';
-import icon from '../public/marker-icon.png'; // Importe a imagem
+// import icon from '../public/marker-icon.png'; // Importe a imagem
 import icon2 from '../public/marker-icon-alt.png'; // Importe a imagem
 import L, { LatLngTuple } from 'leaflet'; // Importe LatLngTuple de leaflet
 
@@ -25,13 +25,13 @@ export default function Map() {
     const position: LatLngTuple = [-23.53043099873096, -46.72610638721699];
 
 
-    const iconOne = useMemo(() => {
-        return L.icon({
-            iconUrl: icon.src, // Use .src para obter o caminho correto
-            iconSize: [16, 32],
-            iconAnchor: [16, 32],
-        });
-    }, []);
+    // const iconOne = useMemo(() => {
+    //     return L.icon({
+    //         iconUrl: icon.src, 
+    //         iconSize: [16, 32],
+    //         iconAnchor: [16, 32],
+    //     });
+    // }, []);
 
     const iconTwo = useMemo(() => {
         return L.icon({
@@ -71,11 +71,11 @@ export default function Map() {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={position} icon={iconOne}>
+                {/* <Marker position={position} icon={iconOne}>
                     <Popup>
                         Um marcador simples.
                     </Popup>
-                </Marker>
+                </Marker> */}
                 {coordenadas && (
                     <Marker position={coordenadas} icon={iconTwo} zIndexOffset={1000}>
                         <Popup>
