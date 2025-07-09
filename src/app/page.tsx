@@ -60,7 +60,7 @@ export default function Home() {
             duration={500}
             offset={-80} // Adjust as needed
           >
-             <button className={styles.cta}>Entre em Contato</button>
+             <button className={styles.cta}>Entre em Contatoaa</button>
           </Link>
         </section>
 
