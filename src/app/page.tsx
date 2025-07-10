@@ -13,6 +13,7 @@ import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faAddressCard, faClock, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-scroll';
 import WhatsappBtn from '../../components/WhatsappBtn';
+import { sendGTMEvent } from '@next/third-parties/google';
 
 const DynamicMap = dynamic(() => import('../../components/Map'), {
   ssr: false,
@@ -38,7 +39,7 @@ export default function Home() {
   return (
     <>
       <Header />
-     <WhatsappBtn /> 
+      <WhatsappBtn />
       <div className={styles.page}>
         <section className={`${styles.sectionFlex} ${styles.section__colums__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div className={styles.h1__container} style={{ alignSelf: 'flex-start' }}>
@@ -53,14 +54,14 @@ export default function Home() {
               layout="responsive"
             />
           </div>
-         
+
           <Link
             to="contato"
             smooth={true}
             duration={500}
             offset={-80} // Adjust as needed
           >
-             <button className={styles.cta}>Entre em Contatoaa</button>
+            <button className={styles.cta}>Entre em Contatoa</button>
           </Link>
         </section>
 
@@ -89,7 +90,7 @@ export default function Home() {
 
         <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
           <div className={`${styles.itemFlex} ${styles.itemFlexCenter} ${styles.gridItemTwo}`}>
-          <DynamicMap />
+            <DynamicMap />
             {/* <div className={styles.img__title}>
               <Image
                 src="./mapa-rua-nanuque-432.png"
@@ -111,8 +112,8 @@ export default function Home() {
 
         </section>
         <section className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
-          
-          
+
+
         </section>
 
         {/* <section id="horario" className={`${styles.sectionFlex} ${styles.section__row__center}`} style={{ backgroundColor: 'var(--cor-verde-claro)' }}>
@@ -232,7 +233,14 @@ export default function Home() {
             <p>Entre em contato conosco e agende uma consulta</p>
             <div className={styles.contatos}>
 
-              <a href="https://www.linkedin.com/in/bruno-pisetta"><FontAwesomeIcon icon={faLinkedin} /></a>
+              <button
+                // href="https://www.linkedin.com/in/bruno-pisetta"
+                onClick={() => {
+                  sendGTMEvent({ event: 'buttonClicked', value: 'contatos-linkedin' });
+                  window.open('https://www.linkedin.com/in/bruno-pisetta', '_blank');
+                }}
+
+              ><FontAwesomeIcon icon={faLinkedin} /></button>
 
               <a href="https://wa.me/5511975672727?text=SuaMensagem">   <FontAwesomeIcon icon={faWhatsapp} /></a>
 
