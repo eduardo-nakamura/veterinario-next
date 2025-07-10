@@ -234,19 +234,34 @@ export default function Home() {
             <div className={styles.contatos}>
 
               <button
-                // href="https://www.linkedin.com/in/bruno-pisetta"
                 onClick={() => {
                   sendGTMEvent({ event: 'buttonClicked', value: 'contatos-linkedin' });
                   window.open('https://www.linkedin.com/in/bruno-pisetta', '_blank');
+                }}><FontAwesomeIcon icon={faLinkedin} /></button>
+
+              <button
+
+                onClick={() => {
+                  sendGTMEvent({ event: 'buttonClicked', value: 'contatos-whatsapp' });
+                  window.open('https://wa.me/5511975672727?text=SuaMensagem', '_blank');
                 }}
+              >   <FontAwesomeIcon icon={faWhatsapp} /></button>
 
-              ><FontAwesomeIcon icon={faLinkedin} /></button>
+              <button
+         
+                onClick={() => {
+                  sendGTMEvent({ event: 'buttonClicked', value: 'contatos-email' });
+                  window.open('mailto:bruno.may.pisetta@gmail.com', '_blank');
+                }}
+              ><FontAwesomeIcon icon={faEnvelope} /></button>
 
-              <a href="https://wa.me/5511975672727?text=SuaMensagem">   <FontAwesomeIcon icon={faWhatsapp} /></a>
-
-              <a href="mailto:bruno.may.pisetta@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
-
-              <a href="https://trakto.link/BrunoMayPisetta"> <FontAwesomeIcon icon={faAddressCard} /></a>
+              <button
+           
+                onClick={() => {
+                  sendGTMEvent({ event: 'buttonClicked', value: 'contatos-trakto' });
+                  window.open('https://trakto.link/BrunoMayPisetta', '_blank');
+                }}
+              > <FontAwesomeIcon icon={faAddressCard} /></button>
             </div>
 
             {/* <p>Whatsapp: <a href="https://wa.me/5511993177378?text=SuaMensagem">(11) 99317-7378</a></p>
